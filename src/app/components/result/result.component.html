@@ -4,7 +4,7 @@
     <ul class="list-group">
         <li class="list-group-item d-flex justify-content-start" *ngFor="let item of questions">
             <span [ngClass]="['badge',item.color, 'badge-pill']"><i [ngClass]="['fas', item.icon]"></i></span>
-            {{item.question}}
+            {{item.question | quotation}}
         </li>
     </ul>
     <br>
