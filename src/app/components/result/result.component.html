@@ -1,0 +1,15 @@
+<div class="jumbotron">
+    <h1 class="display-5">You scored</h1>
+    <h1 class="display-6">{{correct}} / {{length}}</h1>
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-start" *ngFor="let item of questions">
+            <span [ngClass]="['badge',item.color, 'badge-pill']"><i [ngClass]="['fas', item.icon]"></i></span>
+            {{item.question}}
+        </li>
+    </ul>
+    <br>
+    <p class="lead">
+        <button class="btn btn-primary btn-lg" role="button" (click)="go.emit()">Play again?</button>
+    </p>
+</div>
+  

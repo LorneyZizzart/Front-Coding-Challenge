@@ -1,0 +1,10 @@
+<p>{{question.category}}</p>
+<div class="jumbotron">
+    <h1 class="display-5 question">{{question.question | quotation}}</h1>
+    <hr class="my-4">
+    <div class="lead d-flex justify-content-around">
+      <button class="btn btn-success btn-lg"  role="button" (click)="next('True')"><i class="fas fa-check"></i></button>
+      <button class="btn btn-warning btn-lg"  role="button" (click)="next('False')"><i class="fas fa-times"></i></button>
+    </div>
+</div>
+<p>{{count | add:1}} / {{length}}</p>

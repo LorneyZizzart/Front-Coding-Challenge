@@ -1,0 +1,9 @@
+<div class="row justify-content-center align-items-center vh-100">   
+    <div *ngIf="questions.length == 0" class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div> 
+    <div class="col-sm-8 text-center" *ngIf="questions.length > 0">
+        <app-question *ngIf="questions.length > count" [question]="question" [count]="count" [length]="questions.length" (option)="next($event)"></app-question>
+        <app-result *ngIf="questions.length == count" [questions]="questions" [correct]="corrects.length" [length]="questions.length" (go)="load()"></app-result>
+    </div>
+</div>
