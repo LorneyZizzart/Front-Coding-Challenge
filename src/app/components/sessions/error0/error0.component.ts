@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-error0',
   templateUrl: './error0.component.html',
   styleUrls: ['./error0.component.scss']
 })
-export class Error0Component implements OnInit {
+export class Error0Component {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  tryAgain(){
+    this.router.navigate(['quiz']);
   }
-
 }
